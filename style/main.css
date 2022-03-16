@@ -1,0 +1,121 @@
+/* Declarar variável */
+:root{
+    /* Cores principais da Netflix */
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+*{
+    /* Reset */
+    margin: 0;
+    padding: 0;
+    /* O limite é a borda da caixa */
+    box-sizing: border-box; 
+}
+
+/* ELEMENTOS BASE */
+
+body{
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    /* Joga tudo para a linha */
+    display: flex;
+    /* Pode ou nao colocar. Eh automatico */
+    flex-direction: row;
+    align-items: center;
+    /* Espaço entre h2 e nav. Sempre segue o flex*/
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/* FILME PRINCIPAL */
+
+.filme-principal{
+    font-size: 16px;
+    /* Gradiente */
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(/img/capa.jpg);
+    height: 600px;
+    /* Ficar na area toda */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.filme-principal .descricao{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 5px;
+}
+
+.botao a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    /* Quando estiver minimizado. Com o px ele muda em qualquer tela */
+    width: 60%;
+}
+
+/* Tamanho das imagens */
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.carrosel-filme{
+    margin-top: 5px;
+}
